@@ -55,3 +55,91 @@ str3 = """+---+---+---+---+---+---+
 -6  -5  -4  -3  -2  -1"""
 
 print(str3)
+
+################################
+python = "Python"
+
+# python[2] = "j" ==> #! Error This Code
+
+python = "Sython"
+
+# python = "j" + python[1:]
+
+print("j" + python[1:])
+
+print(len(python))
+print(len("Alireza"))
+
+list1 = [12, "alireza", 15]
+
+print(list1)
+
+print(list1[2: 3])
+print(list1[2:])
+print(list1[:-1])
+print(list1[-1])
+
+list2 = [12, 13, 14, 15, 16]
+
+sum = list1 + list2
+
+print(sum)
+
+list2[4] = "hahahaha"
+
+print(list2)
+
+list2.append([15, 18, "js"])
+list2.append(105)
+
+print(list2)
+
+
+list2[2: 3] = "js"
+print(list2)
+list2[2: 4] = []
+print(list2)
+# list2[0:-1] = "jsjsjsjsj"
+list2[1] = 8
+print(list2)
+
+list3 = [1, 2, 3, 4, 5, 6]
+
+str4 = "Alireza"
+
+print(len(list3))
+print(list3[5])
+print(str4[0])
+
+nestedList = [list1, list2, list3]
+
+print(nestedList)
+print(nestedList[0][1])
+
+a, b, c = 0, 1, 2
+
+print(a)
+print(b)
+print(c)
+
+j = 0
+while j <= 5:
+    print(j, end=" | ")
+    # j = j + 1
+    j = j + 1
+
+
+# * Fib
+
+z, x = 0, 1
+
+while z <= 1000:
+    print(z)
+    z, x = x, z + x
+
+
+h = 2
+
+while h < 5000000000:
+    print(h)
+    h = h ** 2
