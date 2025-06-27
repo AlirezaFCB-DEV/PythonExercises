@@ -1,14 +1,56 @@
-userNum = int(input("Please Enter A Number : "))
+words = ["Alireza", "Boxing", "Trading", "Programming"]
 
-print("UserNum : ", userNum)
+for w in words:
+    print(w, len(w))
 
-studentScore = float(input("Please Enter Your Score : "))
+#! words.copy().items() A Copy Of Words Objects(Dictionary)
 
-if studentScore <= 10:
-    print("Your Not Success , Your Degree D :((")
-elif studentScore <= 13:
-    print("Your Degree C")
-elif studentScore <= 17:
-    print("Your Degree B")
-else:
-    print("Your Degree A")
+user = {"name": "Alireza", "id": 1, "age": 16, "job": "FrontEnd Developer"}
+
+# user2 = user.copy().items() #! Copy OF User
+
+# print(user2)
+
+for property, value in user.copy().items():
+    if value == "Alireza":
+        print("1name")
+        print(property)
+    elif value == 16:
+        print("3age")
+        print(property)
+    elif value == "FrontEnd Developer":
+        print("4job")
+        print(property)
+    else:
+        print("2id")
+        print(property)
+
+for prop in user:
+    print(prop)
+
+for prop, val in user.items():
+    print(prop, val)
+
+js = "js"
+
+#! slice structure [start : stop : step]
+
+print(js[::-1])
+
+
+users = {"Alireza": "active", "Marzie": "inactive",
+         "Mojtaba": "inactive", "Mostafa": "inactive", "Narges": "inactive"}
+
+for prop, val in users.copy().items():
+    if prop == "Mostafa" or prop == "Narges":
+        del users[prop]
+
+print(users)
+
+Parents = {}
+
+for prop, val in users.items():
+    if val == "inactive":
+        Parents[prop] = "active"
+
+print(Parents)
