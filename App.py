@@ -1,56 +1,27 @@
-words = ["Alireza", "Boxing", "Trading", "Programming"]
+for i in range(10):
+    print(i + 1)
 
-for w in words:
-    print(w, len(w))
+for i in range(5, 10):
+    print(i)
 
-#! words.copy().items() A Copy Of Words Objects(Dictionary)
+for i in range(0, 10, 3):
+    print(i)
 
-user = {"name": "Alireza", "id": 1, "age": 16, "job": "FrontEnd Developer"}
+for i in range(-1, -100, -10):
+    print(i)
 
-# user2 = user.copy().items() #! Copy OF User
+alireza = "alireza"
 
-# print(user2)
+for w in alireza:
+    print(w)
 
-for property, value in user.copy().items():
-    if value == "Alireza":
-        print("1name")
-        print(property)
-    elif value == 16:
-        print("3age")
-        print(property)
-    elif value == "FrontEnd Developer":
-        print("4job")
-        print(property)
-    else:
-        print("2id")
-        print(property)
+words = ["alireza", 15, "js", "react", 18, ["js", "angular", "react"]]
 
-for prop in user:
-    print(prop)
+for i in range(len(words)):
+    print(i, words[i])
 
-for prop, val in user.items():
-    print(prop, val)
+print(range(10))
 
-js = "js"
+print("line 25: ", sum(range(10)))
+# print("line 26: ", sum(8)) #! error for that number is not iterable
 
-#! slice structure [start : stop : step]
-
-print(js[::-1])
-
-
-users = {"Alireza": "active", "Marzie": "inactive",
-         "Mojtaba": "inactive", "Mostafa": "inactive", "Narges": "inactive"}
-
-for prop, val in users.copy().items():
-    if prop == "Mostafa" or prop == "Narges":
-        del users[prop]
-
-print(users)
-
-Parents = {}
-
-for prop, val in users.items():
-    if val == "inactive":
-        Parents[prop] = "active"
-
-print(Parents)
