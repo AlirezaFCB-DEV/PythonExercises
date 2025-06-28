@@ -1,7 +1,12 @@
-for n in range(1, 10):
-    for x in range(2, n):
-        if n % x == 0:
-            print(f"{n} equals {x} * {n // x}")
-            break
-    else:
-        print(f"{n} is a prime number")
+# Pass Statement
+
+#* while True :
+#*     pass
+
+class MyFakeClass :
+    pass
+
+def myFakeFunc () :
+    pass
+
+myFakeFunc()
