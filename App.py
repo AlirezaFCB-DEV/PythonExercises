@@ -1,8 +1,22 @@
-def calc(a, b, /):
-    print(a, b)
+def welcome (* , name) :
+    print(f"Hello {name} Is The Best Ever")
 
+#? Error The Down Code
+#! welcome("Alireza") 
 
-calc(a=5, b=6)
+welcome(name="Alireza")
 
-#! Error on this code
-# * calc(b=5, a=6)
+#* multiple caracters
+
+def mixed (x , / , y ,* , z) :
+    print(x , y , z)
+    
+mixed(15 , "s" , z="Alireza")
+
+#! Error
+# mixed(x=15 , y="s" , z="js")
+
+#! Error
+# mixed(16 , y="alr" , "js")
+
+mixed(16 , "alir" , z="za")
