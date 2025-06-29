@@ -1,7 +1,8 @@
-def show(name, age):
-    print(f"Hello {name} with {age} years old!")
+def calc(a, b, /):
+    print(a, b)
 
 
-show("Alireza", 16)
-show(age=16, name="Alireza")
-show("Alireza", age=16)
+calc(a=5, b=6)
+
+#! Error on this code
+# * calc(b=5, a=6)
