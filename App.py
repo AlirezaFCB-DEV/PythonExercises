@@ -1,6 +1,8 @@
-def shop(item, price=100, *args, **tags):
-    print(
-        f"item={item} , price={price} , tuple type : args=[{args}] , dictionary (obj) :  tags=[{tags}]")
+def add(*nums):
+    sum_val = 0
+    for i in range(len(nums)):
+        sum_val += nums[i]
+    return sum_val
 
-
-shop("Boxing Gloves", 120, "limited Edition", True, oz=12, color="blue")
+print(add(100 , 200 , 300))
+    
