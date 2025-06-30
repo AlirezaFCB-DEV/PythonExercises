@@ -1,22 +1,6 @@
-def welcome (* , name) :
-    print(f"Hello {name} Is The Best Ever")
+def shop(item, price=100, *args, **tags):
+    print(
+        f"item={item} , price={price} , tuple type : args=[{args}] , dictionary (obj) :  tags=[{tags}]")
 
-#? Error The Down Code
-#! welcome("Alireza") 
 
-welcome(name="Alireza")
-
-#* multiple caracters
-
-def mixed (x , / , y ,* , z) :
-    print(x , y , z)
-    
-mixed(15 , "s" , z="Alireza")
-
-#! Error
-# mixed(x=15 , y="s" , z="js")
-
-#! Error
-# mixed(16 , y="alr" , "js")
-
-mixed(16 , "alir" , z="za")
+shop("Boxing Gloves", 120, "limited Edition", True, oz=12, color="blue")
