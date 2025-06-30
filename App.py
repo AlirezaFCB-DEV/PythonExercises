@@ -1,8 +1,6 @@
-def add(*nums):
-    sum_val = 0
-    for i in range(len(nums)):
-        sum_val += nums[i]
-    return sum_val
+def show (name , age):
+    print(f"{name} is {age} years old")
 
-print(add(100 , 200 , 300))
-    
+data = ["Alireza" , 16]
+show(*data)
+
