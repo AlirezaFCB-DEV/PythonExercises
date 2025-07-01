@@ -1,5 +1,15 @@
-def show (name , age , city):
-    print(f"{name} is {age} years old living in {city}")
+def func () : 
+    """this function says Hello World!"""
+    print("Hello World!")
     
-info = {"name" : "Alireza" , "age" : 16 , "city" : "karaj"}
-show(**info)
+    
+func()
+
+def add (num1 , num2) :
+    """
+    this func plus num1 to num2 and return response
+    """
+    return num1 + num2
+
+
+print(add(1 , 5))
