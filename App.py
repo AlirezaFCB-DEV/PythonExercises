@@ -1,7 +1,3 @@
-a = [1, 2, 1, 3, 5, 8, 5]
-del a[1]
-print(a)
-del a[1:3]
-print(a)
-del a
-# print(a)
+tuple_list  = (1 , 2 , 3 ,4)
+# del tuple_list[1] #! Error This Code For Tuples Is Immutable
+print(tuple_list)
