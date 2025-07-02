@@ -1,17 +1,7 @@
-from collections import deque
+squares = [x**2 for x in range(11) if x != 0]
 
-q = deque([1 , 2 ,3 ])
-q.append(4)
-print(q.popleft())
-print(q)
+print(squares)
 
-#! Top A Good Code
+evens = [x2 for x2 in range(10) if x2 % 2 == 0 and x2 != 0]
 
-queue = [1, 2, 3]
-queue.append(4)
-queue.append(5)
-
-print(queue.pop(0)) 
-print(queue)
-
-#! Top A bad code , For Bad Performance In Big Lists
+print(evens)
