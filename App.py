@@ -1,3 +1,3 @@
-import math
+import test
 
-print(math.sqrt(81))
+test.say_hi("Alireza")
