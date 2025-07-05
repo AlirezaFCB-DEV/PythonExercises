@@ -1,12 +1,7 @@
-import sys
-import random 
-import datetime
-import math 
-import os
+import random
 
-print(sys.version)
-print(random.random())
-print(datetime)
-print(math.pow(2 , 2))
-print(os.getcwd())
-
+print(dir(random))
+print("----")
+print(dir([]))
+print("----")
+print(dir(""))
