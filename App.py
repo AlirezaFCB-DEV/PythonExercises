@@ -1,6 +1,12 @@
-import test
 import sys
+import random 
+import datetime
+import math 
+import os
 
-test.say_hi("Alireza")
+print(sys.version)
+print(random.random())
+print(datetime)
+print(math.pow(2 , 2))
+print(os.getcwd())
 
-print(sys.path)
