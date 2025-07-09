@@ -25,5 +25,17 @@ if auth_result == True:
     for product in products:
         print(
             f"{product['id']}.{product['name']} | Price:{product['price']} | count:{product['count']} \n")
+
+    print("For End Buying 0+Enter")
+
+    def select_product():
+        return int(input("Please Enter A Product Id For Buy A Product : "))
+
+    while (True):
+        selected_product = select_product()
+        if selected_product == 0:
+            break
+
+
 elif auth_result == False:
     print("Please Login Or Signup!!")
