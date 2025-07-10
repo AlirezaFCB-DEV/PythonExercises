@@ -33,6 +33,14 @@ if auth_result == True:
     def select_product():
         return int(input("Please Enter A Product Id For Buy A Product : "))
 
+    def new_product(name, price, id, count=1):
+        return {
+            "id": id,
+            "name": name,
+            "price": price,
+            "count": int(count)
+        }
+
     while (True):
         selected_product = select_product()
         if selected_product == 0:
@@ -41,7 +49,15 @@ if auth_result == True:
             for product in products:
                 if product["id"] == selected_product:
                     product_index = product["id"] - 1
-                    user_cart.append(products[product_index])
+                    main_product = products[product_index]
+                    product_count = input(
+                        "Please Enter Product Count [Default = 1]: ")
+                    if product_count:
+                        user_cart.append(new_product(
+                            main_product["name"], main_product["price"], main_product["id"], count=product_count))
+                    else:
+                        user_cart.append(new_product(
+                            main_product["name"], main_product["price"], main_product["id"]))
 
     print(user_cart)
 
