@@ -20,6 +20,8 @@ else:
 
 
 if auth_result == True:
+    user_cart = []
+
     print("Welcome To My Shop! \nYou Can Choose Products Of This Products: ")
 
     for product in products:
@@ -35,7 +37,13 @@ if auth_result == True:
         selected_product = select_product()
         if selected_product == 0:
             break
+        else:
+            for product in products:
+                if product["id"] == selected_product:
+                    product_index = product["id"] - 1
+                    user_cart.append(products[product_index])
 
+    print(user_cart)
 
 elif auth_result == False:
     print("Please Login Or Signup!!")
