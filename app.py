@@ -1,5 +1,6 @@
-from Modules.Data.Products import products
 from Modules.Authentication import authentication
+from Modules.ProductManagement import ProductManagement
+from Modules.SubModules.products_printer import product_printer
 
 user_enter_way = int(input("1.Login  2.Signup ? "))
 
@@ -20,46 +21,13 @@ else:
 
 
 if auth_result == True:
-    user_cart = []
-
-    print("Welcome To My Shop! \nYou Can Choose Products Of This Products: ")
-
-    for product in products:
-        print(
-            f"{product['id']}.{product['name']} | Price:{product['price']} | count:{product['count']} \n")
-
-    print("For End Buying 0+Enter")
-
-    def select_product():
-        return int(input("Please Enter A Product Id For Buy A Product : "))
-
-    def new_product(name, price, id, count=1):
-        return {
-            "id": id,
-            "name": name,
-            "price": price,
-            "count": int(count)
-        }
-
-    while (True):
-        selected_product = select_product()
-        if selected_product == 0:
-            break
-        else:
-            for product in products:
-                if product["id"] == selected_product:
-                    product_index = product["id"] - 1
-                    main_product = products[product_index]
-                    product_count = input(
-                        "Please Enter Product Count [Default = 1]: ")
-                    if product_count:
-                        user_cart.append(new_product(
-                            main_product["name"], main_product["price"], main_product["id"], count=product_count))
-                    else:
-                        user_cart.append(new_product(
-                            main_product["name"], main_product["price"], main_product["id"]))
-
-    print(user_cart)
+    user_cart = ProductManagement()
+    
+    print("Your Cart : ")
+    for cart_item in user_cart:
+        product_printer(cart_item)
+        
+    
 
 elif auth_result == False:
     print("Please Login Or Signup!!")
