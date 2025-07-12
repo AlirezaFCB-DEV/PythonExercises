@@ -1,6 +1,7 @@
 from Modules.Authentication import authentication
-from Modules.ProductManagement import ProductManagement
-from Modules.SubModules.products_printer import product_printer
+from Modules.UserPanel import user_panel
+from Modules.OwnerCMS import owner_cms
+from Modules.AdminCMS import admin_cms
 
 user_enter_way = int(input("1.Login  2.Signup ? "))
 
@@ -20,14 +21,11 @@ else:
     print("Invalid Method!!")
 
 
-if auth_result == True:
-    user_cart = ProductManagement()
-    
-    print("Your Cart : ")
-    for cart_item in user_cart:
-        product_printer(cart_item)
-        
-    
-
+if auth_result == "owner" :
+    owner_cms()
+elif auth_result == "admin" :
+    admin_cms()
+elif auth_result == "user":
+    user_panel()
 elif auth_result == False:
     print("Please Login Or Signup!!")

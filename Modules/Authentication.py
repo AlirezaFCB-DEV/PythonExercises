@@ -1,5 +1,6 @@
 
 from .Data.Users import users
+from .Data.Admins import admins
 
 
 def authentication(method, email, password, user_name=""):
@@ -10,10 +11,17 @@ def authentication(method, email, password, user_name=""):
     """
     if method == "login":
 
-        for user in users:
-            if email == user["email"] and password == user["password"]:
-                print("Welcome To Your Account!")
-                return True
+        for admin in admins:
+            if email == admin["email"] and password == admin["password"] :
+                if admin["admin"] :
+                    return "admin"
+                elif admin["owner"]:
+                    return "owner"
+            else :
+                for user in users:
+                    if email == user["email"] and password == user["password"]:
+                        print("Welcome To Your Account!")
+                        return "user"
 
             print("Email Or Password Incorrect!!")
             return False
@@ -30,4 +38,4 @@ def authentication(method, email, password, user_name=""):
 
         print("Welcome To Your Account!!")
 
-        return True
+        return "user"
