@@ -2,7 +2,7 @@ from Modules.Data.Products import products
 from .SubModules.products_printer import product_printer
 
 
-def ProductManagement():
+def buy_product():
     user_cart = []
 
     print("Welcome To My Shop! \nYou Can Choose Products Of This Products: ")
