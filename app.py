@@ -1,14 +1,7 @@
 
-#! Old Way
-name = "Alireza"
-age = 16
+#! Very Old Way
 
-print("My name is {} and i'm {} years old.".format(name, age))
+name,age,price= "Alireza" , 16 , 1684848.556846848
 
-price = 15687.5464687978
-
-print("price: {:.2f}".format(price))
-
-print("{0} is {1} years old.".format(name, age))
-
-print("User: {name} , Age: {age}".format(name="Ali", age=2000))
+print("My name is %s and I am %d years old." % (name, age))
+print("price : %.2f" % price)
