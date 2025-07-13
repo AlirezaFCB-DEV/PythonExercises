@@ -1,14 +1,14 @@
-name = "Alireza" 
+
+#! Old Way
+name = "Alireza"
 age = 16
 
-print(f"My name is {name} and i'm {age} years old.")
+print("My name is {} and i'm {} years old.".format(name, age))
 
-price = 13588.548687869
+price = 15687.5464687978
 
-print(f"price : {price:.2f}")
-print(f"price : {price:,.2f}")
+print("price: {:.2f}".format(price))
 
-var1 = "abcde"
+print("{0} is {1} years old.".format(name, age))
 
-print(f"word: {var1:<10}")
-print(f"word: {var1:>10}")
+print("User: {name} , Age: {age}".format(name="Ali", age=2000))
