@@ -1,7 +1,19 @@
+file = open("info.txt", "w")
+file.write("Hello Is A Test MSG!! \n")
+file.close()
 
-#! Very Old Way
+file = open("readme.md", "r")
+print(
+    file.read()
 
-name,age,price= "Alireza" , 16 , 1684848.556846848
+)
+file.close()
 
-print("My name is %s and I am %d years old." % (name, age))
-print("price : %.2f" % price)
+#####################
+
+with open("js.js", "w") as f:
+    f.write("console.log('hahahaha')")
+
+with open("js.js", "r") as f:
+    data = f.read()
+    print(data)
