@@ -1,1 +1,0 @@
-# Chert Va Pert
