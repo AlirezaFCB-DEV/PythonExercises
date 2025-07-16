@@ -1,3 +1,2 @@
-# if True 
-#     print("HI")
-#! The Syntax Error   
+print(10 / 0) #! ZeroDivisionError
+int("ABC") #! Value Error
