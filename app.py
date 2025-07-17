@@ -1,7 +1,14 @@
+# try : 
+#     print("salam")
+# except ValueError :
+#     print("value is invalid")
+# except TypeError :
+#     print("type is invalid")
+
+############
+
 try :
-    f = open("file.txt")
-    #...
-except FileNotFoundError:
-    print("file not found!!")
-finally :
-    f.close() #! Always Running !!
+    print("code ...")
+except (ValueError , TypeError) as e :
+    print(f"Handled Error : {e}")
+    
