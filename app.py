@@ -1,5 +1,4 @@
-try :
-    raise ValueError("invalid input")
-except ValueError as e :
-    e.add_note("please make sure the input is numeric")
-    raise
+a = [1 , 2 , 3]
+b = a 
+b.append(4)
+print(a) #* [1, 2, 3, 4]
