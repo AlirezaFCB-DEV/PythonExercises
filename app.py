@@ -1,19 +1,8 @@
-class Person:
-    x = 12
+class Hello :
+  #! All Class Methods Required Get Self In Arguments
+  def say_hello (self) :
+    print("Hello Im Say Hello Method In Hello Class!!")
+  
+a = Hello()
 
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
-
-
-a = Person("Alireza", 16)
-b = Person("Mojtaba", 47)
-
-a.x = "jsjsjs"
-
-b.x = "TsTsTsTs"
-
-print(a)
-print(b)
-print(a.x)
-print(b.x)
+a.say_hello()
