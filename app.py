@@ -1,8 +1,14 @@
-class Hello :
-  #! All Class Methods Required Get Self In Arguments
-  def say_hello (self) :
-    print("Hello Im Say Hello Method In Hello Class!!")
+class Dog :
+  material = "German Shepherd"
   
-a = Hello()
+  def __init__(self , name):
+     self.name = name
+     
+aliDog = Dog("Wolf")
+RezaDog = Dog("BigLion")
 
-a.say_hello()
+print(aliDog.material)
+print(RezaDog.material)
+
+print(aliDog.name)
+print(RezaDog.name)
