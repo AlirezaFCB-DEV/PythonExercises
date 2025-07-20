@@ -1,9 +1,3 @@
-def count_up_to(max) :
-    count = 1
-    
-    while count <= max :
-        yield count
-        count += 1
-
-for num in count_up_to(4):
-    print(num)
+squares = (x * x for x in range(3))
+for s in squares:
+    print(s)
