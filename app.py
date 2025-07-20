@@ -1,18 +1,11 @@
-class Flyer:
-    def fly(self):
-        print("i can fly!")
+class Person :
+    def __init__(self, name):
+        self.__name = name #! Private Variable
+        
+    def get_name (self):
+        return self.__name
+    
+Ali = Person("Alireza")
 
-
-class Swimmer:
-    def swim(self):
-        print("i can swim!")
-
-
-class duck (Flyer, Swimmer):
-    pass
-
-
-a = duck()
-
-a.fly()
-a.swim()
+print(Ali.get_name())
+print(Ali.__name)
