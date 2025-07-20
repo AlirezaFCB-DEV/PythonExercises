@@ -1,14 +1,22 @@
-class Dog :
-  material = "German Shepherd"
-  
-  def __init__(self , name):
-     self.name = name
-     
-aliDog = Dog("Wolf")
-RezaDog = Dog("BigLion")
+class Animal:
+    def speak(self):
+        print("This animal makes a sound")
 
-print(aliDog.material)
-print(RezaDog.material)
 
-print(aliDog.name)
-print(RezaDog.name)
+class Dog(Animal):
+    pass
+
+
+a = Dog()
+
+a.speak()
+
+
+class Cat (Animal):
+    def speak(self):
+        print("meo")
+
+
+b = Cat()
+
+b.speak()
