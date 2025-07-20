@@ -1,11 +1,8 @@
-class Person :
-    def __init__(self, name):
-        self.__name = name #! Private Variable
+class Car :
+    def __str__(self):
+        return "This Is A Car"
         
-    def get_name (self):
-        return self.__name
-    
-Ali = Person("Alireza")
+BugattiChiron = Car()
 
-print(Ali.get_name())
-print(Ali.__name)
+print(BugattiChiron)
+print(isinstance(BugattiChiron , Car))
