@@ -1,22 +1,18 @@
-class Animal:
-    def speak(self):
-        print("This animal makes a sound")
+class Flyer:
+    def fly(self):
+        print("i can fly!")
 
 
-class Dog(Animal):
+class Swimmer:
+    def swim(self):
+        print("i can swim!")
+
+
+class duck (Flyer, Swimmer):
     pass
 
 
-a = Dog()
+a = duck()
 
-a.speak()
-
-
-class Cat (Animal):
-    def speak(self):
-        print("meo")
-
-
-b = Cat()
-
-b.speak()
+a.fly()
+a.swim()
