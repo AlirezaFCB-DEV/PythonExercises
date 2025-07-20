@@ -1,21 +1,9 @@
-list1 = [1, 2, 3]
+def count_up_to(max) :
+    count = 1
+    
+    while count <= max :
+        yield count
+        count += 1
 
-it = iter(list1)
-
-print(next(it))
-print(next(it))
-
-
-class Nums:
-    def __iter__(self):
-        self.a = 1
-        return self
-
-    def __next__(self):
-        x = self.a
-        self.a += 1
-        return x
-
-
-num2 = Nums()
-
+for num in count_up_to(4):
+    print(num)
