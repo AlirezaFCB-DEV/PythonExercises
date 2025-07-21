@@ -1,10 +1,4 @@
-import random
-import math
+from urllib.request import urlopen
 
-print(math.sqrt(81))
-
-
-print(random.choice(["a", "b", "c"]))
-print(
-    random.random()
-)
+for line in urlopen("https://google.com"):
+    print(line.decode("utf-8").strip())
