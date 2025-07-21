@@ -1,3 +1,3 @@
-import glob
+import sys
 
-print(glob.glob("*.txt")) # === ls *.txt
+print(sys.argv)
