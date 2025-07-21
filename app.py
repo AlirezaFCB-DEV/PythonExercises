@@ -1,5 +1,7 @@
-from datetime import date
+import zlib
 
-now = date.today()
-print(now)
-print(now.strftime("%Y/%m/%d"))
+data = b"hello world \n" * 10
+
+compressed = zlib.compress(data)
+print(len(compressed))
+print(zlib.decompress(compressed))
