@@ -1,4 +1,5 @@
-from urllib.request import urlopen
+from datetime import date
 
-for line in urlopen("https://google.com"):
-    print(line.decode("utf-8").strip())
+now = date.today()
+print(now)
+print(now.strftime("%Y/%m/%d"))
