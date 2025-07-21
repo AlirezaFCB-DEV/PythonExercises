@@ -1,7 +1,3 @@
-import zlib
+import timeit
 
-data = b"hello world \n" * 10
-
-compressed = zlib.compress(data)
-print(len(compressed))
-print(zlib.decompress(compressed))
+print(timeit.timeit('"-".join(str(n) for n in range(100))' , number=10000))
