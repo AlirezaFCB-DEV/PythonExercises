@@ -1,3 +1,10 @@
-import re
+import random
+import math
 
-print(re.findall(r"\bf\w+", "foo bar fizz fozz"))
+print(math.sqrt(81))
+
+
+print(random.choice(["a", "b", "c"]))
+print(
+    random.random()
+)
