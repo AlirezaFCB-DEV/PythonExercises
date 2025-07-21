@@ -1,5 +1,3 @@
-import os
+import glob
 
-print(os.getcwd())
-os.chdir("/tmp") #change directory
-os.system("sudo nano /etc/resolv.conf -S AlirezaFCB") #! Doing A Command
+print(glob.glob("*.txt")) # === ls *.txt
