@@ -1,3 +1,5 @@
-squares = (x * x for x in range(3))
-for s in squares:
-    print(s)
+import os
+
+print(os.getcwd())
+os.chdir("/tmp") #change directory
+os.system("sudo nano /etc/resolv.conf -S AlirezaFCB") #! Doing A Command
