@@ -1,4 +1,3 @@
-import sys
+import re
 
-sys.stderr.write("An Error !\n")
-sys.exit(1) # exit with code 1 
+print(re.findall(r"\bf\w+", "foo bar fizz fozz"))
